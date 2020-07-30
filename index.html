@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover In/Out</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript"
+    src= "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+             $('img').hover(function() {
+                 var next = $(this).attr('data-alt-source');
+                 $(this).attr('src', next);
+             }, function() {
+                 var original = $(this).attr('data-org-source');
+                 $(this).attr('src', original);
+
+             }
+            );
+        });
+    </script>
+</head>
+
+<body>
+    <div id='wrapper'>
+        <!-- <img src="images/bulbasaur.jpeg" data-alt-source="images/ivysaur.jpg" data-org-src="images/bulbasaur.jpeg" alt="pokemon"> -->
+        <img src="images/charmander.png" data-alt-source="images/charmeleon.jpg" data-org-source="images/charmander.png" alt="pokemon">
+        <img src="images/squirtle.jpg" data-alt-source="images/wartortle.png" data-org-source="images/squirtle.jpg" alt="pokemon">
+        <img src="images/chikorita.png" data-alt-source="images/bayleef.png" data-org-source="images/chikorita.png" alt="pokemon">
+        <img src="images/cyndaquil.png" data-alt-source="images/quilava.png" data-org-source="images/cyndaquil.png" alt="pokemon">
+        <img src="images/totodile.png" data-alt-source="images/croconaw.jpg" data-org-source="images/totodile.png" alt="pokemon">
+
+
+    </div>
+</body>
+
+</html>
